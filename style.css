@@ -1,0 +1,149 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --ltpink: hsl(275, 100%, 97%);
+  --graypurple: hsl(292, 16%, 49%);
+  --dkpurple: hsl(292, 42%, 14%);
+  --purple: hsl(300, 100%, 25%);
+}
+
+/*Weights: 400, 600, 700*/
+
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+
+body {
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  font-size: 16px;
+  background: var(--ltpink);
+}
+
+header {
+  height: 20vh;
+  margin: -8px;
+  padding: 0;
+  background: url('./assets/images/background-pattern-mobile.svg');
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  transition: 150ms ease-in-out;
+}
+
+.h2-open {
+  cursor: pointer;
+}
+
+.h2-open:hover {
+  color: var(--purple);
+}
+
+p {
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: var(--graypurple);
+}
+
+hr {
+  opacity: 20%;
+}
+
+main {
+  position: relative;
+  top: -150px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 10px;
+}
+
+.star {
+  position: relative;
+  top: 10px;
+  height: 30px;
+  cursor: inherit;
+}
+
+.plus, .minus {
+  height: 40px;
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.no {
+  justify-content: start;
+}
+
+.hide {
+  display: none;
+}
+
+.attribution { 
+  margin-top: -50px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px; 
+  text-align: center; 
+  color: rgb(27, 168, 138);
+}
+.attribution a { 
+  color: rgb(17, 28, 187); 
+}
+
+@media (min-width: 760px) {
+  header {
+    background: url('./assets/images/background-pattern-desktop.svg');
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    grid-column: 2;
+    width: 700px;
+  }
+}
